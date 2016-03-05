@@ -1,0 +1,43 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+my_name:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+lista_aut:
+    path: /lista_aut
+    defaults: { _controller: AppBundle:Default:lista_aut }
+
+lista_transakcji:
+    path: /lista_transakcji
+    defaults: { _controller: AppBundle:Default:lista_transakcji }
+
+wykonanie:
+    path: /wykonanie
+    defaults: { _controller: AppBundle:Default:wykonanie }
+
+dziekujemy:
+    path: /dziekujemy
+    defaults: { _controller: AppBundle:Default:dziekujemy }
+
+wypozycz_auto:
+    path: /wypozycz_auto/{id}
+    defaults: { _controller: AppBundle:Default:wypozyczauto, id: 1}
+
+do_payment:
+    path: /do_payment
+    defaults: { _controller: AppBundle:Default:doPayment }
+
+confirm_payment:
+    path: /confirm_payment
+    defaults: { _controller: AppBundle:Default:confirmPayment }
+
+res_potwierdzenie:
+    path: /res_potwierdzenie
+    defaults: { _controller: AppBundle:Default:respotwierdzenie }
+
+res_odmowa:
+    path: /res_odmowa
+    defaults: { _controller: AppBundle:Default:resodmowa }

@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+ 
+{% block body %}
+	<div class="container-fluid">
+    	<div class="row">
+        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          		<h1 class="page-header">Rezerwacja</h1>
+				{{ form_start(form) }}
+				{{ form_errors(form) }}
+                {{ form_widget(form.id) }}
+				<div class="table-responsive">
+            		<table class="table table-striped">
+              			<thead>
+                			<tr>
+                  				<th></th>
+                  				<th></th>
+                			</tr>
+              			</thead>
+              			<tbody>
+                			<tr>
+	                  			<td>Identyfikator</td>
+                  				<td>{{ car.id }}</td>
+                			</tr>
+                			<tr>
+                  				<td>Nazwa</td>
+                  				<td>{{ car.name }}</td>
+                			</tr>
+                			<tr>
+                  				<td>Segment</td>
+                  				<td>{{ car.segment }}</td>
+                			</tr>
+                			<tr>
+                  				<td>Cena</td>
+                  				<td>{{ car.price }}</td>
+                			</tr>
+                			<tr>
+                  				<td>Ilość dni</td>
+                  				<td>{{ form_widget(form.dni) }}</td>
+                			</tr>
+                			<tr>
+                  				<td>Adres pocztowy</td>
+                  				<td>{{ form_widget(form.mail) }}</td>
+                			</tr>
+
+              			</tbody>
+            		</table>
+          		</div>
+				{{ form_end(form) }}
+			</div>
+    	</div>
+	</div>
+{% endblock %}
+

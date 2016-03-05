@@ -1,0 +1,27 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+my_name:
+    path: /greet/
+    defaults: { _controller: AppBundle:Default:index }
+
+greet:
+    path: /
+    defaults: { _controller: AppBundle:Default:greet }
+
+change_name:
+    path: /change-name/{name}
+    defaults:
+        _controller: AppBundle:Default:changeName
+
+it_works:
+    path: /it/it_works
+    defaults:
+        _controller: AppBundle:Default:myName
+
+read_book:
+    path: /book/read/{title}
+    defaults:
+        _controller: AppBundle:Default:readBook
+        page: 1

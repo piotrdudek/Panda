@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        	<h1 class="page-header">Rezerwacja potwierdzona. Proszę dokonać płatności</h1>
+          	<div class="table-responsive">
+            	<table class="table table-striped">
+              		<thead>
+                		<tr>
+                  			<th></th>
+                  			<th></th>
+                		</tr>
+              		</thead>
+              		<tbody>						
+						<tr>
+							<form action="{{ path('do_payment')}}" method="POST">
+    							<button type="submit" >Opłać rezerwacje</button>
+							</form>
+						</tr>
+              		</tbody>
+				</table>
+			</div>
+    	</div>
+    </div>
+ </div>
+{% endblock %}
+

@@ -1,0 +1,20 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    book_shelf:
+        class: Jkan\BookReader\Infrastructure\InMemoryBookShelf
+
+    book_reader:
+        class: Jkan\BookReader\Application\BookService
+        arguments:
+            - '@book_shelf'
+
+    car_reader:
+        class: Panda5\CarRent\Infrastructure\mySQLCars
+

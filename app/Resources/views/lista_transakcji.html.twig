@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %} 
+{% block body %}
+	<div class="container-fluid">
+		<div class="row">
+        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          		<h1 class="page-header">Log transakcji</h1>
+          		<div class="table-responsive">
+            		<table class="table table-striped">
+              			<thead>
+                			<tr>
+                  				<th>Id</th>
+                  				<th>Czas</th>
+                  				<th>Auto</th>
+                  				<th>Cena</th>
+								<th>Ilość dni</th>
+								<th>Status</th>
+								<th>Numer płatności</th>
+								<th>Mail</th>
+                			</tr>
+              			</thead>
+              			<tbody>
+
+						{% for tran in trans %}
+						<tr>
+							<td>{{ tran.id }}</a></td>
+                  			<td>{{ tran.czas }}</td>
+                  			<td>{{ tran.name }}</td>
+                  			<td>{{ tran.price }}</td>
+                  			<td>{{ tran.days }}</td>
+                  			<td>{{ tran.status }}</td>
+                  			<td>{{ tran.numer }}</td>
+							<td>{{ tran.mail }}</td>
+						</tr>
+ 						{% endfor %}
+              			</tbody>
+            		</table>
+          		</div>
+    		</div>
+    	</div>
+    </div>
+{% endblock %}
+

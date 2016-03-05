@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        	<h1 class="page-header">Dziękujemy za wypożyczenie auta</h1>
+          	<div class="table-responsive">
+            	<table class="table table-striped">
+              		<thead>
+                		<tr>
+                  			<th></th>
+                  			<th></th>
+                		</tr>
+              		</thead>
+              			<tbody>
+						{% for pla in platnosc %}
+							<tr>
+								<td>Status</td>
+                  				<td>{{ pla }}</td>
+							</tr>
+ 						{% endfor %}
+              			</tbody>
+            		</table>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+</div>
+{% endblock %}
+
